@@ -37,7 +37,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./code/hangman-front
-          file: ./code/hangman-front/Dockerfile
+          context: ./hangman-front
+          file: ./hangman-front/Dockerfile
           push: true
           tags: ghcr.io/${{ steps.prep.outputs.owner }}/hangman-front:latest
